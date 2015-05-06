@@ -10,3 +10,4 @@ twbs:bootstrap
 underscore
 mquandalle:jade
 coffeescript
+iron:router
