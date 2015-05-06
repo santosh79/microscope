@@ -1,4 +1,4 @@
-var postData = [
+postData = [
   {
     title: 'Introducing Telescope',
     url: 'http://sachagreif.com/introducing-telescope/'
@@ -11,10 +11,9 @@ var postData = [
     title : 'The Meteor Book',
     url: 'http://themeteorbook.com'
   }
-];
+]
 
-if (Posts.find().count() === 0) {
-  _.each(postData, function(post) {
-    Posts.insert(post);
-  });
-}
+dbEmpty =  Posts.find().count() == 0
+if dbEmpty
+  Posts.insert(post) for post in postData
+
