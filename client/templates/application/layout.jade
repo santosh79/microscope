@@ -1,8 +1,7 @@
 template(name="layout")
-  body
-    .container
-      header(class="navbar navbar-default" role="navigation")
-        .navbar-header
-          a(class="navbar-brand" href="{{pathFor 'postsList'}}") Microscope
+  .container
+    header(class="navbar navbar-default" role="navigation")
+      .navbar-header
+        a(class="navbar-brand" href="{{pathFor 'postsList'}}") Microscope
     .main
       +yield

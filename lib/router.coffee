@@ -1,6 +1,7 @@
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
+  notFoundTemplate: 'notFound',
   waitOn: () ->
     Meteor.subscribe 'allPosts'
 })
@@ -10,3 +11,5 @@ Router.route('/posts/:_id', {
   data: () ->
     Posts.findOne this.params._id
 })
+
+Router.onBeforeAction('dataNotFound', {only: 'postPage'})
