@@ -12,4 +12,5 @@ Router.route('/posts/:_id', {
     Posts.findOne this.params._id
 })
 
+Router.route('/post_new', {name: 'postSubmit'})
 Router.onBeforeAction('dataNotFound', {only: 'postPage'})
