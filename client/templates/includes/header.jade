@@ -1,0 +1,14 @@
+template(name="header")
+  nav(class="navbar navbar-default" role="navigation")
+    .navbar-header
+      button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(class="navbar-brand" href="{{pathFor 'postsList'}}") Microscope
+    
+    .collapse.navbar-collapse#navigation
+      ul.nav.navbar-nav.navbar-right
+        +loginButtons
+
